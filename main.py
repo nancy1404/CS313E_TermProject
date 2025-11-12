@@ -172,7 +172,7 @@ class StatsManager:
         """
 
         # sort alphabetically by player_id before seraching
-        print("\nSorting players alphabetically for search...")
+        print("\nSorting alphabetically...")
         self.players = sorted(self.players, key = lambda p: p.player_id)
         print("Players sorted alphabetically.\n")
 
@@ -246,7 +246,65 @@ class StatsManager:
             print(f"{team}: {avg:.3f}")
         print("--------------------------\n")
 
-        return team_avg        
+        return team_avg     
+
+    # 7. Interactive Menu
+    def run_menu(self):
+        """
+        Provides a simple text-based interface for users
+        to interact with the program and call different features.
+        """
+
+        while True:
+            print("\n===============================")
+            print("!!Sports Stats Tracker Menu!!")
+            print("===============================")
+            print("1. Display all players")
+            print("2. Sort players by batting average")
+            print("3. Sort players by home runs")
+            print("4. Search for a player by ID")
+            print("5. Show top-k players")
+            print("6. Display team average batting averages")
+            print("7. Exit program")
+            print("===============================")
+
+            choice = input("Enter your choice (1-7): ").strip()
+
+            if choice == "1":
+                self.display_all()
+            elif choice == "2":
+                self.sort_by_avg(key="avg", descending=True)
+                self.display_all()
+            elif choice == "3":
+                self.sort_by_avg(key="hr", descending=True)
+                self.display_all()
+            
+            elif choice == "4":
+                target = input("Enter playerID to search: ").strip()
+                result = self.search_player(target)
+                if result:
+                    print(result)
+
+            elif choice == "5":
+                try:
+                    k = int(input("Enter k (number of top players): "))
+                except ValueError:
+                    print("Invalid input. Please enter an integer.")
+                    continue
+                stat = input("Sort by 'hr' or 'avg'? ").strip().lower()
+                if stat not in ("hr", "avg"):
+                    stat = "hr"
+                self.top_home_runs(k=k, key=stat)
+            
+            elif choice == "6":
+                self.team_average()
+            
+            elif choice == "7":
+                print("Exiting Sports Stats Tracker. Bye!")
+                break
+
+            else:
+                print("Invalid choice. Please select from 1-7.")
 
 
 # Main Program
@@ -295,6 +353,11 @@ def main():
     # 6.
     # Team Averages
     stats.team_average()
+    print("\nAll test cases executed successfully!")
+
+    # 7. 
+    # OPTIONAL: Uncomment for interactive version
+    # stats.run_menu()
 
 
 if __name__ == "__main__":
