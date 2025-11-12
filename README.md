@@ -5,7 +5,7 @@
 | Name          | GitHub Handle       | Contribution                                                                 |
 |----------------|--------------------|------------------------------------------------------------------------------|
 | **Nancy Nakyung Kwak (nk24424)** | [@nancy1404](https://github.com/nancy1404) | algorithm implementation, testing |
-| **Jooyeong Lee** | [@warmhug01](https://github.com/warmhug01) | documentation, presentation |
+| **Juyoung Lee** | [@warmhug01](https://github.com/warmhug01) | documentation, presentation |
 
 ---
 
