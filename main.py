@@ -1,6 +1,6 @@
 # Sports Stats Tracker
 # CS 313E Final Project
-# Author: Nancy Kwak
+# Author: Nancy Kwak + Jooyeong Lee
 # GitHub: github.com/nancy1404/CS313E_TermProject
 # This program reads a baseball dataset (Batting.csv) and
 # allows the user to view player statistics. It demonstrates

@@ -4,7 +4,7 @@
 
 | Name          | GitHub Handle       | Contribution                                                                 |
 |----------------|--------------------|------------------------------------------------------------------------------|
-| **Nancy Kwak** | [@nancy1404](https://github.com/nancy1404) | Lead developer, algorithm implementation, testing, documentation |
+| **Nancy Nakyung Kwak (nk24424)** | [@nancy1404](https://github.com/nancy1404) | Lead developer, algorithm implementation, testing, documentation |
 | **Jooyeong Lee** | _(pending)_ | bla bla  |
 
 ---
